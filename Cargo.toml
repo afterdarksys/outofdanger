@@ -1,0 +1,20 @@
+[package]
+name = "outofdanger"
+version = "0.1.0"
+edition = "2021"
+description = "A policy-enforcing wrapper for dangerous commands"
+license = "MIT"
+repository = "https://github.com/afterdarksys/outofdanger"
+readme = "README.md"
+keywords = ["rm", "safety", "policy", "cli", "sysadmin"]
+categories = ["command-line-utilities"]
+
+[[bin]]
+name = "outofdanger"
+path = "src/main.rs"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
+
